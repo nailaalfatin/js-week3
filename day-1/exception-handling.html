@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exception Handling</title>
+</head>
+<body>
+    
+    <label for="pembilang">Pembilang</label> <br>
+    <input 
+    type="text" 
+    id="pembilang"
+    placeholder="Masukkan pembilang"> <br><br>
+
+    <label for="penyebut">Penyebut</label> <br>
+    <input 
+    type="text" 
+    id="penyebut"
+    placeholder="Masukkan penyebut"> <br><br>
+    <button onclick="hitungPembagian()">Hitung Pembagian</button>
+
+    <p>Hasil</p>
+    <div id="hasil"></div>
+
+
+    <script>
+        function hitungPembagian(){
+            var pembilang = document.getElementById("pembilang").value;
+            var penyebut = document.getElementById("penyebut").value;
+
+            var pembilangFinal = parseFloat(pembilang);
+            var penyebutFinal = parseFloat(penyebut);
+
+            if(isNaN(penyebutFinal) || isNaN(pembilangFinal)){
+                document.getElementById("hasil").textContent = 
+                "Harap isi penyebut dan pembilang";
+            } else if(penyebutFinal === 0){
+                document.getElementById("hasil").textContent = 
+                "Pembagian oleh nol tidak diizinkan";
+            } else{
+                var hasil2 = pembilangFinal / penyebutFinal;
+                document.getElementById("hasil").textContent = hasil2;
+            }
+
+        } 
+        var pembilang1 = 10;
+        var penyebut1 = 2;
+
+        if (penyebut1 === 0){
+            console.error("pembagian oleh nol tidak diizinkan");
+        } else {
+            var hasil1 = pembilang1 / penyebut1;
+            console.log("hasil pembagian = " + hasil1)
+        }
+    </script>
+</body>
+</html>

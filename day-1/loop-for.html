@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loop For</title>
+</head>
+<body>
+    <!-- 
+        JavaScript mendukung berbagai jens loop:
+        1. for- mengulang blok kode beberapa kali
+        2. for/in- menelusuri beberapa object
+        3. for/of- mengulang nilai object yang dapat diubah
+        4. while- mengulang blok kode selama kondisi yang ditentukan benar
+        5. do/while- juga mengulang blok kode selama kodisi yang ditentukan benar
+     -->
+
+     <div id="hasil"></div>
+     <script>
+        // untuk pengulangan
+        // ++ itu nambah satu
+        for (var angka = 1; 
+            angka <= 5;
+            angka++) {
+        console.log(angka);
+        }
+        
+        let text = "";
+        for (let i = 1;
+             i < 5;
+             i++) {
+                text+= "The number is " + i + "<br>";
+            }
+        document.getElementById("hasil").innerHTML = text;
+     </script>
+    
+</body>
+</html>
